@@ -35,8 +35,9 @@ cd ..
 ```
 git clone https://github.com/ladislav-zezula/wcx_mpq.git
 cd wcx_mpq
-make-msvc.bat
+make-msvc.bat /web
 ```
+The installation package will be in the current directory.
 
 5) Locate the wcx_mpq.zip file and step into it in Total Commander (Ctrl+PgDown).
 Total Commander will ask whether you want to install the plugin. After the plugin
