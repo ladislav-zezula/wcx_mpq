@@ -1,0 +1,8 @@
+[plugininstall]
+description=MPQ archive support
+descriptioncsy=Podpora archivù MPQ
+
+type=wcx
+file=mpq.wcx
+defaultdir=plugins\wcx\mpq
+defaultextension=mpq

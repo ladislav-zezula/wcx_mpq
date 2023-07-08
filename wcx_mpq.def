@@ -1,0 +1,25 @@
+;------------------------------------------------------------------------------
+; Export file for Total Commander packer plugin
+
+EXPORTS
+    CanYouHandleThisFile
+    CanYouHandleThisFileW
+    OpenArchive
+    OpenArchiveW
+    CloseArchive
+    GetPackerCaps
+    ProcessFile
+    ProcessFileW
+    ReadHeader
+    ReadHeaderEx
+    ReadHeaderExW
+    SetChangeVolProc
+    SetChangeVolProcW
+    SetProcessDataProc
+    SetProcessDataProcW
+    PackFiles
+    PackFilesW
+    DeleteFiles
+    DeleteFilesW
+    ConfigurePacker
+    PackSetDefaultParams

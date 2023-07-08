@@ -1,0 +1,222 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech (Czech Republic) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Czech (Czech Republic) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,7,0,190
+ PRODUCTVERSION 1,7,0,190
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Total Commander plugin for MPQ archives"
+            VALUE "CompanyName", "Ladik"
+            VALUE "FileDescription", "wcx_mpq"
+            VALUE "FileVersion", "1, 7, 0, 190\0"
+            VALUE "InternalName", "wcx_mpq"
+            VALUE "LegalCopyright", "Copyright (c) 2003-2023 Ladislav Zezula"
+            VALUE "LegalTrademarks", "http://www.zezula.net"
+            VALUE "OriginalFilename", "wcx_mpq.dll"
+            VALUE "ProductName", "MPQ Plugin for Total Commander"
+            VALUE "ProductVersion", "1, 7, 0, 190\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WCX_MPQ_SETTINGS DIALOGEX 0, 0, 372, 212
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add file(s) options"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        " General settings ",IDC_STATIC,7,7,358,72,WS_GROUP
+    CONTROL         "Create archives version 2 (supports MPQs over 4 GB)",IDC_CREATE_MPQ_V2,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,12,20,347,8
+    CONTROL         "When showing files, make file locale ID to be part of file name, e.g. ""File.txt (040A)""",IDC_LOCALES_WITH_NAME,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,12,34,347,8
+    CONTROL         "Encrypt newly added files",IDC_ENCRYPT_ADDED_FILES,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,12,48,347,8
+    CONTROL         "After a delete operation, compact the archive",IDC_COMPACT_AFTER_DELETE,
+                    "Button",BS_AUTOCHECKBOX,12,62,347,8
+    GROUPBOX        " Hash Table Size ",IDC_STATIC,7,83,114,34,WS_GROUP
+    EDITTEXT        IDC_MAX_FILE_COUNT,14,96,91,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_MAX_FILE_COUNT_SPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,105,96,11,14
+    GROUPBOX        " File Compression ",IDC_STATIC,129,83,114,34,WS_GROUP
+    COMBOBOX        IDC_COMPRESSION,136,96,99,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        " File Locale ",IDC_STATIC,251,83,114,34,WS_GROUP
+    COMBOBOX        IDC_FILE_LOCALE,260,96,99,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "External listfile",IDC_STATIC,7,124,357,8
+    EDITTEXT        IDC_LISTFILE,7,135,337,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,348,135,17,14
+    LTEXT           "The following file types will not be compressed when added to a MPQ:",IDC_STATIC,7,158,357,8
+    EDITTEXT        IDC_EXCLUDED_TYPES,7,168,358,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,260,191,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,315,191,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_WCX_MPQ_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_WCX_MPQ_SETTINGS DLGINIT
+BEGIN
+    IDC_COMPRESSION, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMPRESSION, 0x403, 8, 0
+0x6d49, 0x6c70, 0x646f, 0x0065, 
+    IDC_COMPRESSION, 0x403, 5, 0
+0x4c5a, 0x4249, "\000" 
+    IDC_COMPRESSION, 0x403, 6, 0
+0x5a42, 0x5049, 0x0032, 
+    IDC_COMPRESSION, 0x403, 5, 0
+0x5a4c, 0x414d, "\000" 
+    IDC_FILE_LOCALE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_FILE_LOCALE, 0x403, 8, 0
+0x6d49, 0x6c70, 0x646f, 0x0065, 
+    IDC_FILE_LOCALE, 0x403, 5, 0
+0x4c5a, 0x4249, "\000" 
+    IDC_FILE_LOCALE, 0x403, 6, 0
+0x5a42, 0x5049, 0x0032, 
+    IDC_FILE_LOCALE, 0x403, 5, 0
+0x5a4c, 0x414d, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_WCX_MPQ_SETTINGS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_NEUTRAL             "Neutral"
+    IDS_LISTFILE_DOES_NOT_EXIST 
+                            "The listfile could not be found. Please, enter another listfile."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
