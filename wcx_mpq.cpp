@@ -243,19 +243,14 @@ int WINAPI GetPackerCaps()
 
 static int CallProcessDataProc(LPCWSTR szFullPath, int nSize)
 {
-    // Call UNICODE version of the callback, if needed
+    // Prioritize UNICODE version of the callback, if exists.
+    // This leads to nicer progress dialog shown by Total Commander
     if(PfnProcessDataW != NULL)
-    {
-        if(!PfnProcessDataW(szFullPath, nSize))
-            return FALSE;
-    }
+        return PfnProcessDataW(szFullPath, nSize);
 
     // Call ANSI version of callback, if needed
     if(PfnProcessDataA != NULL)
-    {
-        if(!PfnProcessDataA(TWideToAnsi(szFullPath), nSize))
-            return FALSE;
-    }
+        return PfnProcessDataA(TWideToAnsi(szFullPath), nSize);
 
     // Continue the operation
     return TRUE;

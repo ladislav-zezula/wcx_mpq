@@ -61,8 +61,8 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,7,0,190
- PRODUCTVERSION 1,7,0,190
+ FILEVERSION 1,7,0,193
+ PRODUCTVERSION 1,7,0,193
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -80,13 +80,13 @@ BEGIN
             VALUE "Comments", "Total Commander plugin for MPQ archives"
             VALUE "CompanyName", "Ladik"
             VALUE "FileDescription", "wcx_mpq"
-            VALUE "FileVersion", "1, 7, 0, 190\0"
+            VALUE "FileVersion", "1, 7, 0, 193\0"
             VALUE "InternalName", "wcx_mpq"
             VALUE "LegalCopyright", "Copyright (c) 2003-2023 Ladislav Zezula"
             VALUE "LegalTrademarks", "http://www.zezula.net"
             VALUE "OriginalFilename", "wcx_mpq.dll"
             VALUE "ProductName", "MPQ Plugin for Total Commander"
-            VALUE "ProductVersion", "1, 7, 0, 190\0"
+            VALUE "ProductVersion", "1, 7, 0, 193\0"
         END
     END
     BLOCK "VarFileInfo"

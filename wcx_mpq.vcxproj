@@ -81,7 +81,7 @@
     <TargetName>mpq</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\bin\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>c:\Program Files\Totalcmd\plugins\wcx\mpq\</OutDir>
     <IntDir>.\bin\$(Platform)\$(Configuration)\</IntDir>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>true</LinkIncremental>
