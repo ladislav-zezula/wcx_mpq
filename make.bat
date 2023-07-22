@@ -31,8 +31,8 @@ del buildfre_w2k_x86.log
 echo.
 
 :POST_BUILD_STEPS
-PostBuild.exe wcx_mpq.rc
-call make-zip.bat .\objfre_wlh_amd64\amd64\wcx_mpq.dll .\objfre_w2k_x86\i386\wcx_mpq.dll
+PostBuild.exe %BINARY_NAME%.rc
+call make-zip.bat .\objfre_wlh_amd64\amd64\%BINARY_NAME%.dll .\objfre_w2k_x86\i386\%BINARY_NAME%.dll
 
 :CLEANUP
 if exist %BINARY_NAME%_WDK.rc del %BINARY_NAME%_WDK.rc
