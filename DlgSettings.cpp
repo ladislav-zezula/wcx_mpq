@@ -73,7 +73,7 @@ void FillLocalesAndSelect(HWND hWndCombo, LCID lcID)
         nItems = ComboBox_GetCount(hWndCombo);
         for(int i = 0; i < nItems; i++)
         {
-            if(ComboBox_GetItemData(hWndCombo, i) == lcID)
+            if((LCID)ComboBox_GetItemData(hWndCombo, i) == lcID)
             {
                 ComboBox_SetCurSel(hWndCombo, i);
                 return;

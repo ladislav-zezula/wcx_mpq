@@ -24,6 +24,7 @@
 // Include StormLib
 #include "StormLib.h"
 #include "Utils.h"                          // Utils functions
+#include "TStringConvert.h"                 // String convertions
 
 //-----------------------------------------------------------------------------
 // Defines
