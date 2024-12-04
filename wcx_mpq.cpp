@@ -394,7 +394,7 @@ static void StoreFileName(TOpenMpqInfo * pInfo, void * pvBuffer, size_t ccBuffer
     {
         LPWSTR szBuffer = (LPWSTR)(pvBuffer);
 
-        StringCchCopyExW(szBuffer, ccBuffer, TUTF8ToWide(pInfo->sf.cFileName), &szBuffer, &ccBuffer, 0);
+        StringCchCopyExW(szBuffer, ccBuffer, TMPQ8ToWide(pInfo->sf.cFileName), &szBuffer, &ccBuffer, 0);
 
         if(pInfo->sf.lcLocale && g_cfg.bAddLocaleToName)
         {

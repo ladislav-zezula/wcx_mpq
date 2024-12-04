@@ -9,31 +9,34 @@
 /*****************************************************************************/
 
 //-----------------------------------------------------------------------------
+// Classes for conversions UNICODE <--> UTF-8
+
+typedef TConvertString<WCHAR, char, CP_UTF8> TWideToUTF8;
+typedef TConvertString<char, WCHAR, CP_UTF8> TUTF8ToWide;
+typedef TConvertString<char, WCHAR, CP_ACP>  TAnsiToWide;
+typedef TConvertString<WCHAR, char, CP_ACP>  TWideToAnsi;
+
+//-----------------------------------------------------------------------------
 // UNICODE versions of StormLib API
 
 inline HANDLE SFileFindFirstFileW(HANDLE hMpq, LPCWSTR szMask, SFILE_FIND_DATA * lpFindFileData, LPCTSTR szListFile)
 {
-    return SFileFindFirstFile(hMpq, TWideToUTF8(szMask), lpFindFileData, szListFile);
+    return SFileFindFirstFile(hMpq, TWideToMPQ8(szMask), lpFindFileData, szListFile);
 }
 
 inline bool SFileOpenFileExW(HANDLE hMpq, LPCWSTR szFileName, DWORD dwSearchScope, HANDLE * phFile)
 {
-    return SFileOpenFileEx(hMpq, TWideToUTF8(szFileName), dwSearchScope, phFile);
+    return SFileOpenFileEx(hMpq, TWideToMPQ8(szFileName), dwSearchScope, phFile);
 }
 
 inline bool SFileAddFileExW(HANDLE hMpq, LPCTSTR szFileName, LPCWSTR szArchivedName, DWORD dwFlags, DWORD dwCompression, DWORD dwCompressionNext)
 {
-    return SFileAddFileEx(hMpq, szFileName, TWideToUTF8(szArchivedName), dwFlags, dwCompression, dwCompressionNext);
+    return SFileAddFileEx(hMpq, szFileName, TWideToMPQ8(szArchivedName), dwFlags, dwCompression, dwCompressionNext);
 }
 
 inline bool SFileRenameFileW(HANDLE hMpq, LPCWSTR szOldFileName, LPCWSTR szNewFileName)
 {
-    return SFileRenameFile(hMpq, TWideToUTF8(szOldFileName), TWideToUTF8(szNewFileName));
-}
-
-inline bool SFileRemoveFileW(HANDLE hMpq, LPCWSTR szFileName, DWORD dwSearchScope)
-{
-    return SFileRemoveFile(hMpq, TWideToUTF8(szFileName), dwSearchScope);
+    return SFileRenameFile(hMpq, TWideToMPQ8(szOldFileName), TWideToMPQ8(szNewFileName));
 }
 
 //-----------------------------------------------------------------------------
@@ -45,7 +48,6 @@ inline bool SFileRemoveFileW(HANDLE hMpq, LPCWSTR szFileName, DWORD dwSearchScop
 #define SFileOpenFileExT           SFileOpenFileExW
 #define SFileAddFileExT            SFileAddFileExW
 #define SFileRenameFileT           SFileRenameFileW
-#define SFileRemoveFileT           SFileRemoveFileW
 
 #else
 
@@ -53,7 +55,6 @@ inline bool SFileRemoveFileW(HANDLE hMpq, LPCWSTR szFileName, DWORD dwSearchScop
 #define SFileOpenFileExT           SFileOpenFileEx
 #define SFileAddFileExT            SFileAddFileEx
 #define SFileRenameFileT           SFileRenameFile
-#define SFileRemoveFileT           SFileRemoveFile
 
 #endif
 
